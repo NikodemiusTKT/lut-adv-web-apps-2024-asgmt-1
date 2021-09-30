@@ -1,6 +1,9 @@
 import './styles.css';
 const wikiText =
   'A dog breed will consistently produce the desirable physical traits, movement and temperament that were developed over decades of selective breeding. For each breed they recognize, kennel clubs and breed registries usually maintain and publish a breed standard which is a written description of the ideal specimen of the breed.[1][3][4] Other uses of the term breed when referring to dogs include pure breeds, cross-breeds, mixed breeds and natural breedsA dog breed is a particular strain that was purposefully bred by humans to perform specific tasks, such as herding, hunting, and guarding. When distinguishing breed from type, the rule of thumb is that a breed always "breeds true".Dogs are the most variable mammal on earth, with artificial selection producing around 450 globally recognized dog breeds. These breeds possess distinct traits related to morphology, which include body size, skull shape, tail phenotype, fur type, and coat colour. Their behavioural traits include guarding, herding, and hunting, and personality traits such as hypersocial behavior, boldness, and aggression. Most breeds were derived from small numbers of founders within the last 200 years. As a result, today dogs are the most abundant carnivore species and are dispersed around the world.';
+
+const dogBreeds = ['akita', 'husky', 'pitbull', 'finnish', 'germanshepherd'];
+
 if (document.readyState !== 'loading') {
   initializeCode();
 } else {
@@ -13,12 +16,13 @@ function initializeCode() {
   let container = document.createElement('div');
   container.className = 'container';
   document.getElementById('app').appendChild(container);
-  for (let index = 0; index < 5; index++) {
-    document.querySelector('.container').appendChild(generateWikiItem(wikiText));
+  for (let index = 0; index < dogBreeds.length; index++) {
+    const breed = dogBreeds[index];
+    document.querySelector('.container').appendChild(generateWikiItem(wikiText, breed));
   }
 }
 
-function generateWikiItem(text) {
+function generateWikiItem(breed, text) {
   // wiki item parent element
   let wikiItem = document.createElement('div');
   wikiItem.className = 'wiki-item';
@@ -26,7 +30,7 @@ function generateWikiItem(text) {
 
   // wiki-items child -> wiki header
   wikiHeader.className = 'wiki-header';
-  wikiHeader.textContent = 'Breed X';
+  wikiHeader.textContent = breed;
   wikiItem.appendChild(wikiHeader);
 
   // wiki-item's child -> wiki content
@@ -47,7 +51,14 @@ function generateWikiItem(text) {
   // img-container's child -> wiki-img element
   let img = document.createElement('img');
   img.className = 'wiki-img';
-  img.src = '';
+  let imgSrc = fetchDogImg('');
+  fetchDogImg(breed)
+    .then((data) => {
+      img.src = data.message;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   imgContainer.appendChild(img);
 
   // Append img-container to wiki-content
@@ -56,4 +67,16 @@ function generateWikiItem(text) {
   // Append everything to the wiki-item parent
   wikiItem.appendChild(wikiContent);
   return wikiItem;
+}
+
+async function fetchDogImg(breed) {
+  let json;
+  try {
+    const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`, {});
+    json = await response.json();
+  } catch (error) {
+    console.error(error);
+  }
+
+  return json;
 }
