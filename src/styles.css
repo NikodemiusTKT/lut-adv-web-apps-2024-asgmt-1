@@ -2,8 +2,25 @@ body {
   font-family: sans-serif;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.img-container {
+  margin-top: 5px;
+}
+
+.wiki-content {
+  margin-top: 0;
+}
+
 .wiki-img {
   width: 100%;
+  margin-top: 0;
+}
+.wiki-text {
+  margin-top: 0;
 }
 
 .wiki-item {
@@ -17,6 +34,7 @@ body {
 .wiki-header {
   text-align: center;
   padding-top: 10px;
+  margin-bottom: 0;
 }
 @media (min-width: 600px) {
   .wiki-content {

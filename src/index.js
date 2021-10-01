@@ -18,7 +18,7 @@ function initializeCode() {
   document.getElementById('app').appendChild(container);
   for (let index = 0; index < dogBreeds.length; index++) {
     const breed = dogBreeds[index];
-    document.querySelector('.container').appendChild(generateWikiItem(breed));
+    container.appendChild(generateWikiItem(breed));
   }
 }
 
