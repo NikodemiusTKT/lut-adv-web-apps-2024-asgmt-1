@@ -38,20 +38,6 @@ function generateWikiItem(text, breed) {
   let wikiContent = document.createElement('div');
   wikiContent.className = 'wiki-content';
 
-  // wiki-content -> wiki-text element which contains text node
-  let wikiText = document.createElement('p');
-  wikiText.className = 'wiki-text';
-  // Insert custom text inside p element
-  fetchBreedSummaryFromWiki(breed)
-    .then((wiki) => {
-      let textNode = document.createTextNode(wiki.extract);
-      wikiText.appendChild(textNode);
-    })
-    .catch((error) => {
-      console.error('wiki fetch error:', error);
-    });
-  wikiContent.appendChild(wikiText);
-
   // wiki-content's child -> img-container
   let imgContainer = document.createElement('div');
   imgContainer.className = 'img-container';
@@ -69,6 +55,19 @@ function generateWikiItem(text, breed) {
 
   // Append img-container to wiki-content
   wikiContent.appendChild(imgContainer);
+  // wiki-content -> wiki-text element which contains text node
+  let wikiText = document.createElement('p');
+  wikiText.className = 'wiki-text';
+  // Insert custom text inside p element
+  fetchBreedSummaryFromWiki(breed)
+    .then((wiki) => {
+      let textNode = document.createTextNode(wiki.extract);
+      wikiText.appendChild(textNode);
+    })
+    .catch((error) => {
+      console.error('wiki fetch error:', error);
+    });
+  wikiContent.appendChild(wikiText);
 
   // Append everything to the wiki-item parent
   wikiItem.appendChild(wikiContent);

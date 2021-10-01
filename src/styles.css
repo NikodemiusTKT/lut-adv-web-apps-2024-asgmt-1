@@ -2,3 +2,19 @@ body {
   font-family: sans-serif;
 }
 
+.wiki-img {
+  width: 100%;
+}
+
+.wiki-item {
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 1px 1px 6px 1px #888888, -1px -1px 6px 1px #888888;
+}
+.wiki-content {
+  padding: 10px 10px;
+}
+.wiki-header {
+  text-align: center;
+  padding-top: 10px;
+}
