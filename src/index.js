@@ -2,7 +2,7 @@ import './styles.css';
 const placeholderText =
   'A dog breed will consistently produce the desirable physical traits, movement and temperament that were developed over decades of selective breeding. For each breed they recognize, kennel clubs and breed registries usually maintain and publish a breed standard which is a written description of the ideal specimen of the breed.[1][3][4] Other uses of the term breed when referring to dogs include pure breeds, cross-breeds, mixed breeds and natural breedsA dog breed is a particular strain that was purposefully bred by humans to perform specific tasks, such as herding, hunting, and guarding. When distinguishing breed from type, the rule of thumb is that a breed always "breeds true".Dogs are the most variable mammal on earth, with artificial selection producing around 450 globally recognized dog breeds. These breeds possess distinct traits related to morphology, which include body size, skull shape, tail phenotype, fur type, and coat colour. Their behavioural traits include guarding, herding, and hunting, and personality traits such as hypersocial behavior, boldness, and aggression. Most breeds were derived from small numbers of founders within the last 200 years. As a result, today dogs are the most abundant carnivore species and are dispersed around the world.';
 
-const dogBreeds = ['shiba', 'husky', 'pitbull', 'pug', 'doberman'];
+const dogBreeds = ['shiba_inu', 'husky', 'pitbull', 'pug', 'doberman'];
 
 if (document.readyState !== 'loading') {
   initializeCode();
@@ -18,12 +18,11 @@ function initializeCode() {
   document.getElementById('app').appendChild(container);
   for (let index = 0; index < dogBreeds.length; index++) {
     const breed = dogBreeds[index];
-    let text;
-    document.querySelector('.container').appendChild(generateWikiItem(text, breed));
+    document.querySelector('.container').appendChild(generateWikiItem(breed));
   }
 }
 
-function generateWikiItem(text, breed) {
+function generateWikiItem(breed) {
   // wiki item parent element
   let wikiItem = document.createElement('div');
   wikiItem.className = 'wiki-item';
@@ -31,7 +30,6 @@ function generateWikiItem(text, breed) {
 
   // wiki-items child -> wiki header
   wikiHeader.className = 'wiki-header';
-  wikiHeader.textContent = breed;
   wikiItem.appendChild(wikiHeader);
 
   // wiki-item's child -> wiki content
@@ -61,8 +59,11 @@ function generateWikiItem(text, breed) {
   // Insert custom text inside p element
   fetchBreedSummaryFromWiki(breed)
     .then((wiki) => {
+      // get summary from wikipedia
       let textNode = document.createTextNode(wiki.extract);
       wikiText.appendChild(textNode);
+      // get header title from wikipedia also
+      wikiHeader.textContent = wiki.title;
     })
     .catch((error) => {
       console.error('wiki fetch error:', error);
@@ -75,6 +76,9 @@ function generateWikiItem(text, breed) {
 }
 
 async function fetchDogImg(breed) {
+  // Had to add inu to shiba breed so correct wikipedia article could be found
+  // remove _inu from shiba so it can be used in DogAPI
+  breed = breed.split('_', 1);
   let json;
   try {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`, {});
