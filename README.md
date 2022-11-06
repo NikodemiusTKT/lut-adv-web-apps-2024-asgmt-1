@@ -1,6 +1,6 @@
 # CT30A3204 Advanced Web Applications - Week 1 Exercise
 ## Requirements
-### 1. HTML generator in JavaScript   
+### 1. HTML generator in JavaScript: PASSED [x]
  * Generate at least five wiki items with JavaScript. 
 
     * All of the wiki items have to be generated with JavaScript using functions such as createElement and appendChild 
@@ -11,14 +11,14 @@
 
     * Generate them inside a `<div>` with a class container.
 
-### 2. Dog image API  
+### 2. Dog image API: PASSED [x] 
 * Get pictures of dogs from dog API. 
 * Each wiki-item should have header with a name of the breed 
 * a picture fetched from the API of the breed of your choosing. 
 * The pictures should be random pictures from the breeds that you have chosen.
 
 
-### 3. Mobile first CSS
+### 3. Mobile first CSS: PASSED [x]
 *  To disable the horizontal scrolling add the following meta to <head> element:  
  ```<meta name="viewport" content="width=device-width, initial-scale=1">```
 
@@ -28,9 +28,9 @@
 * wiki-content should also have some padding on all sides (top, right, bottom and left) so that the text and image have some space from the edges. 
 
 
-### 4. Media queries
+### 4. Media queries: PASSED [x]
 
-* To make a different look for the desktop, use media query. 
+* _To make a different look for the desktop, use media query_. 
 * The minimum width for the desktop version should be 600px. 
 
 * To make this page better looking for desktop, using the media query for screens that are at least 600px, 
@@ -49,7 +49,7 @@
   * Also set the margin of that class and use "0 auto" value so that it sets the margin automatically to left and right and centers the content. 
 
 
-### 5. Wiki text from Wikipedia
+### 5. Wiki text from Wikipedia: PASSED [x]
 
  * Use Wikipedias API to get the summary for every breed page (/page/summary/{title}. 
 
