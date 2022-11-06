@@ -36,7 +36,7 @@ function initializeCode() {
 function generateWikiItem(breed) {
   // wiki item parent element
   let wikiItem = document.createElement('div');
-  wikiItem.classname = 'wiki-item';
+  wikiItem.className = 'wiki-item';
 
   // wiki-item's child -> wiki content
   let wikiContent = document.createElement('div');
