@@ -2,10 +2,14 @@
 ## Requirements
 ### 1. HTML generator in JavaScript   
  * Generate at least five wiki items with JavaScript. 
-  * All of the wiki items have to be generated with JavaScript using functions such as createElement and appendChild 
+
+    * All of the wiki items have to be generated with JavaScript using functions such as createElement and appendChild 
+
  * the web page should not have a single wiki item without JavaScript. 
-  * Use the same element tags and class names as on the template! 
-  * Generate them inside a <div> with a class container.
+
+    * Use the same element tags and class names as on the template! 
+
+    * Generate them inside a `<div>` with a class container.
 
 ### 2. Dog image API  
 * Get pictures of dogs from dog API. 
