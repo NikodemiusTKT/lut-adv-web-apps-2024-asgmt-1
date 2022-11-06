@@ -2,7 +2,6 @@
   "name": "lut-www-course-2022-week-1",
   "version": "1.0.0",
   "description": "LUT WWW Course weekly Assignment 1",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
