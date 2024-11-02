@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## 1.1.0 (2024-11-02)
 
-
 ### Features
 
-* update project structure and README ([7fa9f68](https://github.com/NikodemiusTKT/lut-adv-web-apps-2024-asgmt-1/commit/7fa9f683f124925de21d617aafad031ce9880d5b))
+- update project structure and README ([7fa9f68](https://github.com/NikodemiusTKT/lut-adv-web-apps-2024-asgmt-1/commit/7fa9f683f124925de21d617aafad031ce9880d5b))
+
+### Changed
+
+- Refactored code to use `async-await` instead of `then` style promises.
+- Improved code readability and maintainability by applying clean code principles.
