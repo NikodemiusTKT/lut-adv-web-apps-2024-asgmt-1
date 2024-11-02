@@ -18,12 +18,6 @@ async function initializeApp() {
   const wikiItems = await Promise.all(DOG_BREEDS.map(generateWikiItem));
   wikiItems.forEach((item) => container.appendChild(item));
 }
-async function initializeApp() {
-  const container = createContainer();
-  document.getElementById("app").appendChild(container);
-  const wikiItems = await Promise.all(DOG_BREEDS.map(generateWikiItem));
-  wikiItems.forEach((item) => container.appendChild(item));
-}
 
 function createContainer() {
   const container = document.createElement("div");
