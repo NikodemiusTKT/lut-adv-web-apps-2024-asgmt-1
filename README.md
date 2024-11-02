@@ -4,48 +4,48 @@ This project is part of the Advanced Web Applications course at LUT University. 
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [APIs Used](#apis-used)
 - [Requirements and Scoring](#requirements-and-scoring)
 - [License](#license)
 
-## Installation
+## Usage
 
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/NikodemiusTKT/lut-adv-web-apps-2024-asgmt-git dog-breeds-wiki
+   git clone https://github.com/NikodemiusTKT/lut-adv-web-apps-2024-asgmt-1.git dog-breeds-wiki
    ```
+
+2. **Navigate to the project directory:**
 
    ```sh
-      cd dog-breeds-wiki
+   cd dog-breeds-wiki
    ```
 
-2. **Install dependencies:**
+3. **Install dependencies:**
 
    ```sh
    npm install
    ```
 
-## Usage
-
-1. **Start the development server:**
+4. **Start the development server:**
 
    ```sh
    npm start
    ```
 
-2. **Build for production:**
+5. **Build for production:**
 
    ```sh
    npm run build
+
    ```
 
-3. **Open web browser:**
+6. **Open web browser:**
 
-   Open your web browser and navigate to `http://localhost:1234.`
+   Open your web browser and navigate to [http://localhost:1234](http://localhost:1234)
 
 ## Project Structure
 
@@ -76,3 +76,7 @@ dog-breeds-wiki/
 - [x] **Mobile First CSS**: The project should make the page look good on mobile screens. The width of images should be set to 100%, and margins and padding should be added to elements for better spacing.
 - [x] **Media Queries**: The project should use media queries to adjust the layout for desktop screens (minimum width 600px). Flexbox should be used to arrange text and images side by side.
 - [x] **Wiki Text from Wikipedia**: The project should fetch the summary for each breed from the Wikipedia API and use the `extract` value as the text for each wiki item.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
