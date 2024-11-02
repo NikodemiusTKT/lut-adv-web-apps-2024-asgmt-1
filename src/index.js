@@ -1,5 +1,3 @@
-import "./styles.css";
-
 // Dog breeds we want to generate the HTML Elements for
 const DOG_BREEDS = ["shiba_inu", "husky", "pitbull", "pug", "doberman"];
 
