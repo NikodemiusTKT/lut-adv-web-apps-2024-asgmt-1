@@ -16,7 +16,7 @@ This project generates a wiki-like page for various dog breeds, displaying image
 
    ```sh
    git clone https://github.com/NikodemiusTKT/lut-adv-web-apps-2024-asgmt-1
-   cd dog-breeds-wiki
+   cd lut-adv-web-apps-2024-asgmt-1
    ```
 
 2. **Install dependencies:**
