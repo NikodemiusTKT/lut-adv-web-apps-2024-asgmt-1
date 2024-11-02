@@ -1,3 +1,4 @@
+/* Dog wiki viewer -- updated 2024-11-02 */
 body {
   font-family: sans-serif;
 }
@@ -26,7 +27,9 @@ body {
 .wiki-item {
   margin-right: 10px;
   margin-left: 10px;
-  box-shadow: 1px 1px 6px 1px #888888, -1px -1px 6px 1px #888888;
+  box-shadow:
+    1px 1px 6px 1px #888888,
+    -1px -1px 6px 1px #888888;
 }
 .wiki-content {
   padding: 10px 10px;

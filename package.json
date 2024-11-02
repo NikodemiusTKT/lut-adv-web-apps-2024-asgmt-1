@@ -1,30 +1,24 @@
 {
-  "name": "lut-www-course-2022-week-1",
+  "name": "lut-adv-web-apps-2024-week-1",
   "version": "1.0.0",
-  "description": "LUT WWW Course weekly Assignment 1",
-    "browserslist": "> 0.5%, last 2 versions, not dead",
+  "description": "LUT University Advanced Web Applications Assignment 1",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html"
   },
   "dependencies": {
     "parcel": "^2.0.0"
   },
-  "devDependencies": {
-  },
-  "resolutions": {
-  },
+  "devDependencies": {},
+  "resolutions": {},
   "keywords": [
     "javascript"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NikodemiusTKT/lut-www-course-2021-week3.git"
+    "url": "git+https://github.com/NikodemiusTKT/lut-adv-web-apps-2024-asgmt-1.git"
   },
   "author": "Teemu Tanninen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NikodemiusTKT/lut-www-course-2021-week3/issues"
-  },
-  "homepage": "https://github.com/NikodemiusTKT/lut-www-course-2021-week3#readme"
+  "license": "MIT"
 }

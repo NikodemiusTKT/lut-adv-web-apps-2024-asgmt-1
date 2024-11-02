@@ -1,70 +1,68 @@
-# CT30A3204 Advanced Web Applications - Week 1 Exercise
-## Requirements
-### 1. HTML generator in JavaScript: PASSED ✅
- 
- * Generate at least five wiki items with JavaScript. 
+# Dog Breeds Wiki
 
-    * All of the wiki items have to be generated with JavaScript using functions such as createElement and appendChild 
+This project generates a wiki-like page for various dog breeds, displaying images and summaries fetched from external APIs. It uses Parcel as the bundler.
 
- * the web page should not have a single wiki item without JavaScript. 
+## Table of Contents
 
-    * Use the same element tags and class names as on the template! 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [APIs Used](#apis-used)
+- [License](#license)
 
-    * Generate them inside a `<div>` with a class container.
+## Installation
 
-### 2. Dog image API: PASSED ✅
+1. **Clone the repository:**
 
-* Get pictures of dogs from dog API. 
+   ```sh
+   git clone https://github.com/NikodemiusTKT/lut-adv-web-apps-2024-asgmt-1
+   cd dog-breeds-wiki
+   ```
 
-* Each wiki-item should have header with a name of the breed 
+2. **Install dependencies:**
 
-* a picture fetched from the API of the breed of your choosing. 
+   ```sh
+   npm install
+   ```
 
-* The pictures should be random pictures from the breeds that you have chosen.
+## Usage
 
+1. **Start the development server:**
 
-### 3. Mobile first CSS: PASSED ✅
+   ```sh
+   npm start
+   ```
 
-*  To disable the horizontal scrolling add the following meta to <head> element:  
- ```<meta name="viewport" content="width=device-width, initial-scale=1">```
+   This will start the Parcel development server and open the project in your default web browser.
 
-* set the width of the image (using its class wiki-img) to 100%.
+2. **Build for production:**
 
-* Add some margin for the wiki-item, so that it would have empty space on right and left (margin-right and margin-left should be something else than 0px). For example, 10px should be fine.
+   ```sh
+   npm run build
+   ```
 
-* make the wiki items easier to separate from each other, set the wiki-item box-shadow to something that you like.
+   This will create a `dist` directory with the production build of your project.
 
-* wiki-content should also have some padding on all sides (top, right, bottom and left) so that the text and image have some space from the edges. 
+## Project Structure
 
+```
+dog-breeds-wiki/
+├── dist/                   # Production build output
+├── node_modules/           # Node.js modules
+├── src/                    # Source files
+│   ├── index.html          # HTML file
+│   ├── index.js            # JavaScript entry point
+│   ├── styles.css          # CSS styles
+├── .gitignore              # Git ignore file
+├── package.json            # NPM package configuration
+├── README.md               # Project README file
+```
 
-### 4. Media queries: PASSED ✅
+## APIs Used
 
-* _To make a different look for the desktop, use media query_. 
+- **Dog CEO API**: Fetches random images of dog breeds.
+- **Wikipedia API**: Fetches summaries of dog breeds.
 
-* The minimum width for the desktop version should be 600px. 
+## License
 
-* To make this page better looking for desktop, using the media query for screens that are at least 600px, 
-
-  * set the display of the wiki-content to flex, and 
-  
-  * set the flow-direction to row-reverse. Now, the image and text should be side by side. 
-
-* The width of the text and image container should be 50% so that the both sides have half of the available space.
-  
-    * This should be done using the "width" css-rule, but due to the restrictions in CodeGrade, set the min-width AND max-width to 50% for the wiki-text
-    and for the img-container.
-
-* make it so that wiki items would not take the whole page. To achieve this: 
-
-  * wrap everything inside a div with a class container, and set the max-width to 960px. 
-
-  * Also set the margin of that class and use "0 auto" value so that it sets the margin automatically to left and right and centers the content. 
-
-
-### 5. Wiki text from Wikipedia: PASSED ✅
-
- * Use Wikipedias API to get the summary for every breed page (/page/summary/{title}. 
-
- * Use the value from the extract key as the text.  
-
- * API: https://en.wikipedia.org/api/rest_v1/ 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
